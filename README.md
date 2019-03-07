@@ -1,10 +1,14 @@
 # Lab-8-StatsSloths
 
 ## Team Section
+* Main Question: Would the number of crime related deaths and injuries in Denver decrease if there were stricter gun laws?
 
 
 
 ## Individual Parts
+### Katie's Section
+* Question: 
+* Findings: 
 
 ### Kevin's Section
 * Question: Which age group among subjects is most likely to fire their gun?
