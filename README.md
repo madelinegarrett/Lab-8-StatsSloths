@@ -2,6 +2,7 @@
 
 ## Team Section
 * Main Question: Would the number of crime related deaths and injuries in Denver decrease if guns were harder to obtain?
+* Dataset: https://www.denvergov.org/content/denvergov/en/police-department/crime-information/crime-statistics-maps.html.html
 
 ```{r}
 team <- mod_shootings %>%
