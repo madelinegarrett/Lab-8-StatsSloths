@@ -27,6 +27,12 @@ crime$ZEROS <- NULL
 ```{r}
 subject <- filter(crime, ROLE == "Subject")
 ```
+```{r}
+ggplot(data = subject)+
+  geom_bar(mapping = aes(x=CASUALTY, fill = ARMED_WITH))+
+  labs(title = "Casualty by Weapon", x = "Type of Casualty", y = "Number of Casualty", fill = "Weapon")+
+  scale_fill_manual(values=c("khaki1", "lightblue3", "pink3", "salmon2", "lightcyan4", "plum3", "palegreen3"))
+```
 
 
 
