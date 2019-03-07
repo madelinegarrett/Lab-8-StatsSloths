@@ -7,8 +7,21 @@
 
 ## Individual Parts
 ### Katie's Section
-* Question: How does the total number of subjects that were killed or injured vary by weapon?
+* Question: How does the level of casualty and total amount of each casualty vary by weapon used?
+
 * Findings: 
+
+```{r}
+crime <- read.csv("denvercrime.csv", header = TRUE, sep = ",", na.strings =c("N/A", " ")) %>%
+  separate(INCIDENT_DATE, into=c("YEAR", "MONTH", "DAY"), sep = "-", convert = TRUE) %>%
+  separate(DAY, into=c("DAY", "ZEROS"), sep = " ", convert = TRUE)
+crime$ZEROS <- NULL
+```
+```{r}
+subject <- filter(crime, ROLE == "Subject")
+```
+
+
 
 ### Kevin's Section
 * Question: Which age group among subjects is most likely to fire their gun?
