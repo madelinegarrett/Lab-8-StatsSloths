@@ -7,7 +7,7 @@
 
 ## Individual Parts
 ### Katie's Section
-* Question: 
+* Question: How does the total number of subjects that were killed or injured vary by weapon?
 * Findings: 
 
 ### Kevin's Section
