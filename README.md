@@ -3,32 +3,20 @@
 ## Team Section
 * Main Question: Would the number of crime related deaths and injuries in Denver decrease if guns were harder to obtain?
 
-* Question Importance:
-
-* Conclusion: Our data showed that among people who are involved in a police confrontation, those who have a gun and are more likely to be injured or killed than those who do not have a gun. Therefore, making guns harder to obtain would decrease the number of people with guns, which in turn would decrease the number of crime related deaths and injuries.
-
-* Recommendation: 
-
 ```{r}
-shootings <- read_csv("denver_police_officer_involved_shootings.csv")
-
-team <- shootings %>%
+team <- mod_shootings %>%
   mutate(Gun = case_when((ARMED_WITH=="Firearm")~"yes", (ARMED_WITH!="Firearm")~"no")) %>%
   filter(ROLE=="Subject")
 
 ggplot(data = team) +
-  geom_bar(mapping = aes(Gun, fill = CASUALTY), position = position_dodge()) +
-  labs(title = "Number of Casualties by Gun Possession", x = "Gun", y = "Count") +
-  theme(axis.title.x=element_blank())
+  geom_bar(mapping = aes(Gun, fill = CASUALTY), position = position_dodge())
  ```
- 
- * Dataset Explanation: 
 
 ## Individual Parts
 ### Katie's Section
 * Question: How does the level of casualty and total amount of each casualty vary by weapon used?
 
-* Findings: 
+* Findings: Overall the most amount of casualties resulted from firearms. 10 out of the 37 subjects were killed when the weapon was a firearm. An additional 10 out of the 37 subjects were injured when the weapon was a firearm. Out of the 37 subject cases 23 of those were involving a firearm which is significantly the largest appearance of one weapon. The knife and replica/air gun tie for 2nd place at 3 observations each. That is an extremely large gap. The most for deceased, injured and not injured casualties all include guns. 
 
 ```{r}
 crime <- read.csv("denvercrime.csv", header = TRUE, sep = ",", na.strings =c("N/A", " ")) %>%
@@ -93,6 +81,6 @@ ggplot(data = shootings) +
 
 
 ## Team Summary:
-* I, Kevin Luth, asked which age group, when confronted by the police, fired their weapon the most. I found that those aged between 20 and 29 were the most likely to fire their gun. To find this, I sorted the dataset, removing unnecessary columns by selecting only the ones of interest to me. I mutated a column to represent the age group of the subject. the three groups I created were those under 20 years old, those between 20 and 29, and those 30 and up. I also filtered the dataset to show only subjects, not officers, and only those with firearms as their weapon. I then created a jitter plot showing the occurances of those who fired their gun and those who did not among each of the age groups. I changed the color of the age groups and the shape of the yes or no decisions to make it easier to tell who did what. I also made the height and width of each jitter smaller to make it clearer which age group and decision each point belonged to. I also changed the labels and title to more accurately display what they represent.
+* I, Kevin Luth, asked which age group, when confronted by the police, fired their weapon the most. I found that those aged between 20 and 29 were the most likely to fire their gun. I mutated a column to represent the age group of the subject. the three groups I created were those under 20 years old, those between 20 and 29, and those 30 and up. I also filtered the dataset to show only subjects, not officers, and only those with firearms as their weapon. I then created a jitter plot showing the occurances of those who fired their gun and those who did not among each of the age groups. I changed the color of the age groups and the shape of the yes or no decisions to make it easier to tell who did what. I also made the height and width of each jitter smaller to make it clearer which age group and decision each point belonged to. I also changed the labels and title to more accurately display what they represent.
 
 * I, Madeline Garrett, answered the question of how initial contact influences the basis of contact that occurs. I did this by sorting through the data into only the categories that I needed, and then by seperating the month and year and date. I then created a bar graph that was seperated into citizen and officer initiated and then seperated those into basis of contact. Becasue there were so many various types of basis of contact, the built in color pallette made it really hard to tell apart. To fix this I assigned each type of basis of contact its own unique color. This made it easier to find and tell apart. 
