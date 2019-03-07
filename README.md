@@ -2,7 +2,7 @@
 
 ## Team Section
 * Main Question: Would the number of crime related deaths and injuries in Denver decrease if guns were harder to obtain?
-
+* Dataset: https://www.denvergov.org/content/denvergov/en/police-department/crime-information/crime-statistics-maps.html.html
 
 
 ## Individual Parts
@@ -19,6 +19,12 @@ crime$ZEROS <- NULL
 ```
 ```{r}
 subject <- filter(crime, ROLE == "Subject")
+```
+```{r}
+ggplot(data = subject)+
+  geom_bar(mapping = aes(x=CASUALTY, fill = ARMED_WITH))+
+  labs(title = "Casualty by Weapon", x = "Type of Casualty", y = "Number of Casualty", fill = "Weapon")+
+  scale_fill_manual(values=c("khaki1", "lightblue3", "pink3", "salmon2", "lightcyan4", "plum3", "palegreen3"))
 ```
 
 
