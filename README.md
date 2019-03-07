@@ -1,7 +1,7 @@
 # Lab-8-StatsSloths
 
 ## Team Section
-* Main Question: Would the number of crime related deaths and injuries in Denver decrease if there were stricter gun laws?
+* Main Question: Would the number of crime related deaths and injuries in Denver decrease if guns were harder to obtain?
 
 
 
