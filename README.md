@@ -9,7 +9,9 @@ team <- mod_shootings %>%
   filter(ROLE=="Subject")
 
 ggplot(data = team) +
-  geom_bar(mapping = aes(Gun, fill = CASUALTY), position = position_dodge())
+  geom_bar(mapping = aes(Gun, fill = CASUALTY), position = position_dodge()) +
+  labs(title = "Number of Casualties by Gun Possession", x = "Gun", y = "Count") +
+  theme(axis.title.x=element_blank())
  ```
 
 ## Individual Parts
