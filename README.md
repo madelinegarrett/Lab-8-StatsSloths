@@ -3,6 +3,12 @@
 ## Team Section
 * Main Question: Would the number of crime related deaths and injuries in Denver decrease if guns were harder to obtain?
 
+* Question Importance:
+
+* Conclusion: Our data showed that among people who are involved in a police confrontation, those who have a gun and are more likely to be injured or killed than those who do not have a gun. Therefore, making guns harder to obtain would decrease the number of people with guns, which in turn would decrease the number of crime related deaths and injuries.
+
+* Recommendation: 
+
 ```{r}
 shootings <- read_csv("denver_police_officer_involved_shootings.csv")
 
@@ -15,6 +21,8 @@ ggplot(data = team) +
   labs(title = "Number of Casualties by Gun Possession", x = "Gun", y = "Count") +
   theme(axis.title.x=element_blank())
  ```
+ 
+ * Dataset Explanation: 
 
 ## Individual Parts
 ### Katie's Section
