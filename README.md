@@ -3,7 +3,14 @@
 ## Team Section
 * Main Question: Would the number of crime related deaths and injuries in Denver decrease if guns were harder to obtain?
 
+```{r}
+team <- mod_shootings %>%
+  mutate(Gun = case_when((ARMED_WITH=="Firearm")~"yes", (ARMED_WITH!="Firearm")~"no")) %>%
+  filter(ROLE=="Subject")
 
+ggplot(data = team) +
+  geom_bar(mapping = aes(Gun, fill = CASUALTY), position = position_dodge())
+ ```
 
 ## Individual Parts
 ### Katie's Section
