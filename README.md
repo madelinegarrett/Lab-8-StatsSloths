@@ -27,5 +27,5 @@ individ <- mod_shootings %>%
 ggplot(data = individ) + 
   geom_jitter(mapping = aes(DISCHARGED_FIREARM, Age_Group, color=Age_Group, shape=DISCHARGED_FIREARM), size=2.5, height = 0.25, width = 0.25) + 
   scale_y_discrete(limits=c("<20","20-29",">30")) +
-  labs(title = "Decision to Fire Weapon on Police by Age", x = "Discharged?", y = "Age Group")
+  labs(title = "Decision to Fire Weapon on Police by Age", x = "Fired?", y = "Age Group")
 ```
