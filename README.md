@@ -2,7 +2,7 @@
 
 ## Team Section
 * Main Question: Would the number of crime related deaths and injuries in Denver decrease if guns were harder to obtain?
-* Dataset: https://www.denvergov.org/content/denvergov/en/police-department/crime-information/crime-statistics-maps.html.html
+
 
 
 ## Individual Parts
@@ -19,12 +19,6 @@ crime$ZEROS <- NULL
 ```
 ```{r}
 subject <- filter(crime, ROLE == "Subject")
-```
-```{r}
-ggplot(data = subject)+
-  geom_bar(mapping = aes(x=CASUALTY, fill = ARMED_WITH))+
-  labs(title = "Casualty by Weapon", x = "Type of Casualty", y = "Number of Casualty", fill = "Weapon")+
-  scale_fill_manual(values=c("khaki1", "lightblue3", "pink3", "salmon2", "lightcyan4", "plum3", "palegreen3"))
 ```
 
 
@@ -73,6 +67,11 @@ ggplot(data = shootings) +
   scale_fill_manual(values=c("#CC6666", "#9999CC", "#66CC99","cadetblue", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7","#0066CC", "pink1", "#F8766D", "#00BA38", "plum3", "lightgoldenrod3", "chocolate3"))
 
 ```
+
+### Zandy's Section
+* Question: how does the level of officer initiated vs citizen initiated change based on the contact basis?
+* Findings:
+
 
 ## Team Summary:
 * I, Kevin Luth, asked which age group, when confronted by the police, fired their weapon the most. I found that those aged between 20 and 29 were the most likely to fire their gun. I mutated a column to represent the age group of the subject. the three groups I created were those under 20 years old, those between 20 and 29, and those 30 and up. I also filtered the dataset to show only subjects, not officers, and only those with firearms as their weapon. I then created a jitter plot showing the occurances of those who fired their gun and those who did not among each of the age groups. I changed the color of the age groups and the shape of the yes or no decisions to make it easier to tell who did what. I also made the height and width of each jitter smaller to make it clearer which age group and decision each point belonged to. I also changed the labels and title to more accurately display what they represent.
