@@ -101,12 +101,34 @@ ggplot(data = shootings) +
 * Total # of non-discharged firearms = 21
 * discharged vs non-discharged firearms for weapon/concealed weapon = 12 discharged weapons vs 2 non-discharged firearms
 * discharged vs non-discharged firearms for shooting = 2 discharged firearms vs 1 non-discharged firearm
-* discharged vs non-discharged = 
+* discharged vs non-discharged firearms for vehicle stop = 8 discharged firearms vs 2 non-discharged firearms 
+* discharged vs non-discharged firearms for a suicidal person/suicide = 2 discharged firearms vs 1 non-discharged firearms 
+* discharged vs non-discharged firearms for a warrant = 9 discharged firearms vs 4 non-discharged firearms
+* discharged vs non-discharged firearms for a robbery = 4 discharged firearms vs 2 non-discharged firearms
+* discharged vs non-discharged firearms for BOLO = 2 discharged firearms vs 0 non-discharged firearms
+* discharged vs non-discgarded firearms for burglary = 2 discharged firearms vs 2 non-discharged firearms
+* discharged vs non-discharged firearms for a suspicious vehicle = 4 discharged firearms vs 0 non-discharged firearms
+* discharged vs non-discharged firearms for a domestic violence = 1 discharged firearm vs 1 non-discharged firearm
+* discharged vs non-discharged firearms for a family disturbance = 2 discharged firearms vs 2 non-discharged firearms 
+* discharged vs non discharged firearms for a street robbery = 1 discharged firearm vs 1 non-discharged firearm
+* discharged vs non-discharged firearms for a vehicle check = 3 discharged firearms vs 0 non-discharged firearms
+* discharged vs non-discharged firearms for a bank robbery suspect = 3 discharged firearms vs 1 non-discharged firearm
+* discharged vs non-discharged firearms for surveillance = 3 discharged firearms vs 2 non-discharged firearms 
+* discharged vs non discharged firearms for a shot spotter = 1 discharged firearm vs 1 non-discharged firearm
 
 ```{r}
 library(tidyverse)
 library(dplyr)
 library(readr)
+denver_police_officer_involved_shootings <-read_csv("C:/Users/zandy/Downloads/denver_police_officer_involved_shootings.csv")
+Parsed with column specification:
+cols(
+  .default = col_character(),
+  INCIDENT_NUMBER = col_double(),
+  INCIDENT_DATE = col_datetime(format = ""),
+  INCIDENT_TIME = col_double(),
+  AGE = col_double()
+)
  
 mod_shootings <- denver_police_officer_involved_shootings %>%
   select(6, 20)
@@ -114,6 +136,55 @@ discharged_firearm <- mod_shootings %>%
   filter(DISCHARGED_FIREARM == "Yes")
 non_discharged <- mod_shootings %>%
   filter(DISCHARGED_FIREARM == "No")
+
+weapon <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Weapon / Concealed Weapon")
+
+shooting <- mod_shootings %>% 
+  filter(CONTACT_BASIS == "Shooting")
+
+
+vehicle_stop <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Vehicle Stop")
+
+suicide <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Suicidal Person / Suicide")
+
+warrant <- mod_shootings %>% 
+  filter(CONTACT_BASIS == "Warrant")
+
+robbery <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Robbery - In Progress / Just Occurred")
+
+BOLO <- mod_shootings %>%
+  filter(CONTACT_BASIS == "BOLO (Be on the lookout)")
+
+burglary <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Burglary - In Progress")
+
+suspicios_vehicle <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Suspicious Vehicle")
+
+domestic_violence <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Domestic Violence - In Progress")
+
+family_disturbance <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Family Disturbance")
+
+street_robbery <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Street Robbery")
+
+vehicle_check <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Vehicle Check")
+
+bank_robbery_suspect <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Bank Robbery Suspect")
+
+surveillance <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Surveillance")
+
+shot_spotter <- mod_shootings %>%
+  filter(CONTACT_BASIS == "Shot Spotter")
   
   ```
 
