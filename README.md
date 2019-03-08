@@ -94,9 +94,28 @@ ggplot(data = shootings) +
 ```
 
 ### Zandy's Section
-* Question: how does the level of officer initiated vs citizen initiated change based on the contact basis?
+* Question: how does the contact-basis change whether a firearm is discharged or not
 * Findings:
 
+* Total # of discharged firearms = 65
+* Total # of non-discharged firearms = 21
+* discharged vs non-discharged firearms for weapon/concealed weapon = 12 discharged weapons vs 2 non-discharged firearms
+* discharged vs non-discharged firearms for shooting = 2 discharged firearms vs 1 non-discharged firearm
+* discharged vs non-discharged = 
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(readr)
+ 
+mod_shootings <- denver_police_officer_involved_shootings %>%
+  select(6, 20)
+discharged_firearm <- mod_shootings %>%
+  filter(DISCHARGED_FIREARM == "Yes")
+non_discharged <- mod_shootings %>%
+  filter(DISCHARGED_FIREARM == "No")
+  
+  ```
 
 ## Team Summary:
 * I, Kevin Luth, asked which age group, when confronted by the police, fired their weapon the most. I found that those aged between 20 and 29 were the most likely to fire their gun. To find this, I sorted the dataset, removing unnecessary columns by selecting only the ones of interest to me. I mutated a column to represent the age group of the subject. the three groups I created were those under 20 years old, those between 20 and 29, and those 30 and up. I also filtered the dataset to show only subjects, not officers, and only those with firearms as their weapon. I then created a jitter plot showing the occurances of those who fired their gun and those who did not among each of the age groups. I changed the color of the age groups and the shape of the yes or no decisions to make it easier to tell who did what. I also made the height and width of each jitter smaller to make it clearer which age group and decision each point belonged to. I also changed the labels and title to more accurately display what they represent.
