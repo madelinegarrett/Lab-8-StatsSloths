@@ -186,6 +186,9 @@ surveillance <- mod_shootings %>%
 shot_spotter <- mod_shootings %>%
   filter(CONTACT_BASIS == "Shot Spotter")
   
+  ggplot(data = mod_shootings ) +
+  geom_bar(mapping = aes(x =DISCHARGED_FIREARM, fill = CONTACT_BASIS)) 
+  
   ```
 
 ## Team Summary:
