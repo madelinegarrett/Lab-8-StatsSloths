@@ -3,7 +3,7 @@
 ## Team Section
 * Main Question: Would the number of crime related deaths and injuries in Denver decrease if guns were harder to obtain?
 
-* Question Importance:	
+* Question Importance: This is an important question to address because there are lives on the line. When we are talking about a topic as sensitive as citizens or officers lives we must take every precaution necessary to ensure that people are sare. In this way it is important that we analyze this question so that we can know what is causing the msot amount of deaths in Denver and how that relates to gun control in our area. Most importantly if taking more guns off the streets would help to save lives. 
 
  * Conclusion: Our data showed that among people who are involved in a police confrontation, those who have a gun and are more likely to be injured or killed than those who do not have a gun. Therefore, making guns harder to obtain would decrease the number of people with guns, which in turn would decrease the number of crime related deaths and injuries.	
 
