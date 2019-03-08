@@ -21,7 +21,8 @@ ggplot(data = team) +
   theme(axis.title.x=element_blank())
  ```
  
- * Dataset Explanation: 
+ * Dataset Explanation: Our dataset shows incidents in which one or more Denver police officer discharged their firearm. It begins on January 1st 2015 and was last updated on August 22nd 2018. There are 24 columns in our data set. The data was retrieved from the following website.  https://www.denvergov.org/content/denvergov/en/police-department/crime-information/crime-statistics-maps.html.html
+
 
 ## Individual Parts
 ### Katie's Section
