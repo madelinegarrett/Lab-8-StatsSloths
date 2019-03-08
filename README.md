@@ -187,8 +187,8 @@ shot_spotter <- mod_shootings %>%
   filter(CONTACT_BASIS == "Shot Spotter")
   
   ggplot(data = mod_shootings ) +
-  geom_bar(mapping = aes(x =DISCHARGED_FIREARM, fill = CONTACT_BASIS)) 
-  
+  geom_bar(mapping = aes(x =DISCHARGED_FIREARM, fill = CONTACT_BASIS)) +
+  labs(title = "# of Firearms being Discharged vs Contact Basis", x = "Discharged_Firearm", y = "Number of Cases")
   ```
 
 ## Team Summary:
