@@ -99,22 +99,22 @@ ggplot(data = shootings) +
 
 * Total # of discharged firearms = 65
 * Total # of non-discharged firearms = 21
-* discharged vs non-discharged firearms for weapon/concealed weapon = 12 discharged weapons vs 2 non-discharged firearms
-* discharged vs non-discharged firearms for shooting = 2 discharged firearms vs 1 non-discharged firearm
-* discharged vs non-discharged firearms for vehicle stop = 8 discharged firearms vs 2 non-discharged firearms 
-* discharged vs non-discharged firearms for a suicidal person/suicide = 2 discharged firearms vs 1 non-discharged firearms 
-* discharged vs non-discharged firearms for a warrant = 9 discharged firearms vs 4 non-discharged firearms
-* discharged vs non-discharged firearms for a robbery = 4 discharged firearms vs 2 non-discharged firearms
-* discharged vs non-discharged firearms for BOLO = 2 discharged firearms vs 0 non-discharged firearms
-* discharged vs non-discgarded firearms for burglary = 2 discharged firearms vs 2 non-discharged firearms
-* discharged vs non-discharged firearms for a suspicious vehicle = 4 discharged firearms vs 0 non-discharged firearms
-* discharged vs non-discharged firearms for a domestic violence = 1 discharged firearm vs 1 non-discharged firearm
-* discharged vs non-discharged firearms for a family disturbance = 2 discharged firearms vs 2 non-discharged firearms 
-* discharged vs non discharged firearms for a street robbery = 1 discharged firearm vs 1 non-discharged firearm
-* discharged vs non-discharged firearms for a vehicle check = 3 discharged firearms vs 0 non-discharged firearms
-* discharged vs non-discharged firearms for a bank robbery suspect = 3 discharged firearms vs 1 non-discharged firearm
-* discharged vs non-discharged firearms for surveillance = 3 discharged firearms vs 2 non-discharged firearms 
-* discharged vs non discharged firearms for a shot spotter = 1 discharged firearm vs 1 non-discharged firearm
+* discharged vs non-discharged firearms for weapon/concealed weapon = 12 discharged weapons vs 2 non-discharged firearms = 85.7% discharged vs 18.5% discharged total
+* discharged vs non-discharged firearms for shooting = 2 discharged firearms vs 1 non-discharged firearm = 67% discharged vs 3.1% discharged total
+* discharged vs non-discharged firearms for vehicle stop = 8 discharged firearms vs 2 non-discharged firearms = 80% discharged vs 12.3% discharged total
+* discharged vs non-discharged firearms for a suicidal person/suicide = 2 discharged firearms vs 1 non-discharged firearms = 67% discharged vs 3.1% discharged total
+* discharged vs non-discharged firearms for a warrant = 9 discharged firearms vs 4 non-discharged firearms = 64.3% discharged vs 13.8% discharged total
+* discharged vs non-discharged firearms for a robbery = 4 discharged firearms vs 2 non-discharged firearms = 67% discharged vs 6.25% discharged total
+* discharged vs non-discharged firearms for BOLO = 2 discharged firearms vs 0 non-discharged firearms = 100% discharged vs 3.1% discharged total
+* discharged vs non-discgarded firearms for burglary = 2 discharged firearms vs 2 non-discharged firearms = 50% discharged vs 3.1% discharged total
+* discharged vs non-discharged firearms for a suspicious vehicle = 4 discharged firearms vs 0 non-discharged firearms = 100% discharged vs 6.15% discharged total
+* discharged vs non-discharged firearms for a domestic violence = 1 discharged firearm vs 1 non-discharged firearm = 50% discharged vs 1.54% discharged total
+* discharged vs non-discharged firearms for a family disturbance = 2 discharged firearms vs 2 non-discharged firearms = 50% discharged vs 3.1% discharged total
+* discharged vs non discharged firearms for a street robbery = 1 discharged firearm vs 1 non-discharged firearm = 50% discharged vs 1.54% discharged total
+* discharged vs non-discharged firearms for a vehicle check = 3 discharged firearms vs 0 non-discharged firearms = 100% discharged vs 4.6% discharged total
+* discharged vs non-discharged firearms for a bank robbery suspect = 3 discharged firearms vs 1 non-discharged firearm = 75% discharged vs 4.6% discharged total
+* discharged vs non-discharged firearms for surveillance = 3 discharged firearms vs 2 non-discharged firearms = 60% discharged vs 4.6% discharged total
+* discharged vs non discharged firearms for a shot spotter = 1 discharged firearm vs 1 non-discharged firearm = 50% discharged vs 1.54% discharged total
 
 ```{r}
 library(tidyverse)
