@@ -73,7 +73,7 @@ ggplot(data = individ) +
 ```
 ### Madeline's Section
 * Question: Does initial contact influence the basis of contact that occurs? 
-* Findings: The data showed that most citizen initiated contact escalated to a weapon/concealed weapon being drawn. This was the most frequent incident found overall with a count of about 15. For officer initiated interactions it was found that vehicle stops were the contact that escalated to a gun being drawn. This was the second most common in the data set at around 11 occurances. Warrent was found to be the most even for both citizen initatied and officer initiated. 
+* Findings: The data showed that most citizen initiated contact escalated to a weapon/concealed weapon being drawn. This was the most frequent incident found overall with a count of about 15. For officer initiated interactions it was found that vehicle stops were the contact that escalated to a gun being drawn. This was the second most common in the data set at around 11 occurances. Warrent was found to be the most even for both citizen initatied and officer initiated.
 
 ```{r}
 library(tidyverse)
@@ -95,7 +95,7 @@ ggplot(data = shootings) +
 
 ### Zandy's Section
 * Question: how does the contact-basis change whether a firearm is discharged or not
-* Findings:
+* Findings: Overall, the most cases where a firearm was discharged was in weapon/concealed weapon, warrant, or a vehicle stop cases with the weapon/concealed weapon case being the highest making up 18.5 % of total cases where a weapon was discharged and overall had the most cases where a weapon was discharged vs when a weapon was not discharged. The next highest was a warrant case with 80% of cases being where a firearm was discharged and in total 13.8% of firearm discharges came from warrant cases. Finally, vehicle stoppage cases were the next highest with 80% of vehicle stoppage cases being where a firearm was discharged and in total, 12.3% of overall firearm discharges came from vehicle stoppage cases.
 
 * Total # of discharged firearms = 65
 * Total # of non-discharged firearms = 21
